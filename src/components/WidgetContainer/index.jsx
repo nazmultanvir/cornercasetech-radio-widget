@@ -27,6 +27,14 @@ const WidgetContainer = (props) => {
         />
       </div>
       <div className="widget-body">{props.children}</div>
+      <div className="widget-footer">
+        {props.fmName ? (
+          <div>
+            <p className="center playingStatus">CURRENTLY PLAYING</p>
+            <p className="center fmName">{props.fmName}</p>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 };

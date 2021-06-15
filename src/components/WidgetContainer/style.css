@@ -1,19 +1,21 @@
 .widget-wrapper{
     width: 610px;
     height: 900px;
-    background-color: #2f2f3a;
+    background-color: #22222b;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    
+    box-shadow: 0 8px 6px -4px black;
 }
 .widget-header{
     background-color: #edae61;
     height: 100px;
+    border: none;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0;
 }
 .headTitleContainer{
     vertical-align: middle;
@@ -23,3 +25,32 @@
     font-size: 32px;
     font-family: Helvetica;
 }
+.widget-body{
+    height: 700px;
+    background-color: #292933;
+    margin: -15px 0px;
+ }
+ .widget-footer{
+    height: 100px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+ }
+ .widget-footer div{
+    vertical-align: middle;
+    padding: 35px 0px;
+ }
+ .widget-footer .playingStatus{
+    margin: 0px;
+    color: #edae61;
+    padding-bottom: 10px;
+    font-family: Helvetica;
+    font-weight: 600;
+ }
+ .widget-footer .fmName {
+    color: #9da6b9;
+    font-family: Helvetica;
+    font-size: 25px;
+    margin: 0px;
+ }
+
+

@@ -1,10 +1,25 @@
 import React, { Component } from "react";
 import "./style.css";
 
+//radio list
+import list from "../../Utility/radioList";
+
 //components
 import WidgetContainer from "../../components/WidgetContainer";
 
 export default class index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      radioList: [],
+      selectedStation: null,
+      currentlyPlayingFmName: "Radio AMAR",
+    };
+  }
+  componentDidMount() {
+    this.setState({ radioList: list });
+    console.log(list);
+  }
   widgetBackButtonAction = () => {
     console.log("back button");
   };
@@ -17,8 +32,16 @@ export default class index extends Component {
         title="STATIONS"
         headBackButton={() => this.widgetBackButtonAction()}
         headShutdownButton={() => this.widgetShutdownAction()}
+        fmName={this.state.currentlyPlayingFmName}
       >
-        <p>hi</p>
+        {this.state.radioList &&
+          this.state.radioList.map((x) => (
+            <div key={x.id}>
+              <p>
+                {x.name} - {x.frequencies}
+              </p>
+            </div>
+          ))}
       </WidgetContainer>
     );
   }
