@@ -1,13 +1,92 @@
 .rowStyle{
     cursor: pointer;
+    margin: 10px 25px;
+    border-bottom: 1px solid #ffffff61;
+}
+.rowSpaceBetween{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 25px;
-    border-bottom: 1px solid #ffffff61;
-
 }
+.fade-in-img{
+    animation: fadeInImg 2s;
+    -webkit-animation: fadeInImg 2s;
+    -moz-animation: fadeInImg 2s;
+    -o-animation: fadeInImg 2s;
+    -ms-animation: fadeInImg 2s;
+  }
+  @keyframes fadeInImg {
+    0% {opacity:0; }
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeInImg {
+    0% {opacity:0; }
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeInImg {
+    0% {opacity:0; }
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeInImg {
+    0% {opacity:0; }
+    100% {opacity:1;}
+  }
+  @-ms-keyframes fadeInImg {
+    0% {opacity:0; }
+    100% {opacity:1;}
+  }
+.fade-in-div {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0; height: 0px;}
+    100% {opacity:1; height: 300px;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0; height: 0px;}
+    100% {opacity:1; height: 300px;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0; height: 0px;}
+    100% {opacity:1; height: 300px;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0; height: 0px;}
+    100% {opacity:1; height: 300px;}
+  }
+  @-ms-keyframes fadeIn {
+    0% {opacity:0; height: 0px;}
+    100% {opacity:1; height: 300px;}
+  }
+
+.playingStationDiv {
+    height: 300px;
+}
+
 .rowStyle .name{
     color: #a2abbd;
     font-size: 25px;
+    font-weight: 600;
 }
+
+.stationLogoWrapper{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #a2abbd;
+}
+.stationLogoWrapper img {
+    width: 200px;
+}
+

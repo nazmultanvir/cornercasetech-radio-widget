@@ -19,7 +19,6 @@ export default class index extends Component {
   }
   componentDidMount() {
     this.setState({ radioList: list });
-    console.log(list);
   }
   widgetBackButtonAction = () => {
     console.log("back button");
@@ -28,7 +27,22 @@ export default class index extends Component {
     console.log("widgetShutdownAction button");
   };
   selectStation = (station) => {
-    console.log(station);
+    let stations = [];
+    this.state.radioList.map((x) => {
+      if (x.id == station.id) {
+        x.playing = true;
+      } else {
+        x.playing = false;
+      }
+      stations.push(x);
+    });
+    this.setState({
+      selectedStation: station.id,
+      currentlyPlayingFmName: station.name,
+      radioList: stations,
+    });
+
+    console.log(stations);
   };
   render() {
     return (
