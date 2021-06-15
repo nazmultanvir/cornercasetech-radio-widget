@@ -71,11 +71,3 @@ export default class index extends Component {
     );
   }
 }
-
-{
-  /* <div key={x.id}>
-<p>
-  {x.name} - {x.frequencies}
-</p>
-</div> */
-}
