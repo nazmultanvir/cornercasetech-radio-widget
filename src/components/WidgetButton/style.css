@@ -1,0 +1,10 @@
+.buttonStyle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.buttonStyle img {
+    padding: 15px;
+    height: 30px;
+}
