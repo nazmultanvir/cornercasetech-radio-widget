@@ -1,0 +1,13 @@
+.rowStyle{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 25px;
+    border-bottom: 1px solid #ffffff61;
+
+}
+.rowStyle .name{
+    color: #a2abbd;
+    font-size: 25px;
+}

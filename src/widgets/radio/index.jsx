@@ -6,6 +6,7 @@ import list from "../../Utility/radioList";
 
 //components
 import WidgetContainer from "../../components/WidgetContainer";
+import WidgetRow from "../../components/WidgetRow";
 
 export default class index extends Component {
   constructor(props) {
@@ -26,6 +27,9 @@ export default class index extends Component {
   widgetShutdownAction = () => {
     console.log("widgetShutdownAction button");
   };
+  selectStation = (station) => {
+    console.log(station);
+  };
   render() {
     return (
       <WidgetContainer
@@ -36,13 +40,21 @@ export default class index extends Component {
       >
         {this.state.radioList &&
           this.state.radioList.map((x) => (
-            <div key={x.id}>
-              <p>
-                {x.name} - {x.frequencies}
-              </p>
-            </div>
+            <WidgetRow
+              key={x.id}
+              data={x}
+              action={() => this.selectStation(x)}
+            />
           ))}
       </WidgetContainer>
     );
   }
+}
+
+{
+  /* <div key={x.id}>
+<p>
+  {x.name} - {x.frequencies}
+</p>
+</div> */
 }
