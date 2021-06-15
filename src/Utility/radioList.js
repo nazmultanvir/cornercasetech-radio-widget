@@ -13,7 +13,7 @@ const list = [
   {
     id: 1,
     name: "Radio Foorti",
-    playing: true,
+    playing: false,
     frequencies: "88.0",
     logo: foorti,
   },

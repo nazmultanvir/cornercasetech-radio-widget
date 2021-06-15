@@ -23,7 +23,7 @@ const WidgetContainer = (props) => {
         <WidgetButton
           icon={shutDown}
           alt="Close Widget"
-          action={() => props.widgetShutdownAction()}
+          action={() => props.headShutdownButton()}
         />
       </div>
       <div className="widget-body">{props.children}</div>

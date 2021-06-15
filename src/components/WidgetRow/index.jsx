@@ -20,15 +20,19 @@ const WidgetRow = (props) => {
             <WidgetButton
               icon={addCircle}
               alt="Go Back"
-              action={() => props.headBackButton()}
+              action={() => console.log("volume up ")}
             />
             <div className="stationLogoWrapper fade-in-img center">
-              <img className="center " src={props.data.logo} />
+              <img
+                className="center"
+                alt={props.data.name}
+                src={props.data.logo}
+              />
             </div>
             <WidgetButton
               icon={mCircle}
               alt="Go Back"
-              action={() => props.headBackButton()}
+              action={() => console.log("volume down")}
             />
           </div>
         ) : null}

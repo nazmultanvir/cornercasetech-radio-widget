@@ -14,7 +14,7 @@ export default class index extends Component {
     this.state = {
       radioList: [],
       selectedStation: null,
-      currentlyPlayingFmName: "Radio AMAR",
+      currentlyPlayingFmName: null,
     };
   }
   componentDidMount() {
@@ -24,12 +24,21 @@ export default class index extends Component {
     console.log("back button");
   };
   widgetShutdownAction = () => {
-    console.log("widgetShutdownAction button");
+    let stations = [];
+    this.state.radioList.forEach((x) => {
+      x.playing = false;
+      stations.push(x);
+    });
+    this.setState({
+      selectedStation: null,
+      currentlyPlayingFmName: null,
+      radioList: stations,
+    });
   };
   selectStation = (station) => {
     let stations = [];
-    this.state.radioList.map((x) => {
-      if (x.id == station.id) {
+    this.state.radioList.forEach((x) => {
+      if (x.id === station.id) {
         x.playing = true;
       } else {
         x.playing = false;
@@ -41,8 +50,6 @@ export default class index extends Component {
       currentlyPlayingFmName: station.name,
       radioList: stations,
     });
-
-    console.log(stations);
   };
   render() {
     return (
